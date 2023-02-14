@@ -1,71 +1,89 @@
 body {
   font-family: "Lora", serif;
-  background-color: rgba(130, 126, 126, 0.921);
+  background-color: #241f23;
 }
 
 #container {
-  height: 100vh;
   display: grid;
   gap: 10px;
   grid-template-columns: 20% 80%;
-  grid-template-rows: 10% 90;
+  grid-template-rows: 15vh 85vh;
   grid-template-areas:
     "nav search-bar"
     "nav main";
 }
-
-/* section {
-  grid-area: hero-section;
-  display: flex;
-  align-items: flex-end;
-  color: #fff;
-}
-
-.hero-section-control {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-.hero-section-title {
-  font-size: 2rem;
-}
-.hero-section-discription {
-  font-size: 1.2rem;
-} */
 
 #main {
   grid-area: main;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  margin-right: 2rem;
+  overflow-x: auto;
 }
 
 .movie-control {
-  background-color: aliceblue;
+  background-color: rgb(192, 161, 144);
+  color: #7e2244;
+  font-weight: bold;
 }
 
 .movie-text-control {
   padding: 1rem;
 }
 
+.movie-title {
+  font-size: 1.6rem;
+
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.movie-type {
+  font-size: 1.2rem;
+}
+
 .movie-img {
   width: 100%;
+  height: 500px;
 }
 
 #nav {
+  color: ghostwhite;
   grid-area: nav;
   display: grid;
-  grid-template-rows: 5% 95%;
+  grid-template-rows: 15% 85%;
   gap: 10px;
+  margin-left: 1rem;
+}
+
+.nav-component {
+  font-size: 1.2rem;
+}
+
+.nav-name {
+  margin-top: 2rem;
+}
+
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
 .menu {
-  font-size: 1.8rem;
+  font-family: neon;
+  padding-top: 0.5rem;
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px rgb(192, 161, 144),
+    0 0 20px rgb(192, 161, 144), 0 0 25px rgb(192, 161, 144),
+    0 0 30px rgb(192, 161, 144), 0 0 35px rgb(192, 161, 144);
 }
 
 #search-bar {
+  color: ghostwhite;
   grid-area: search-bar;
   display: flex;
   flex-direction: column;
+  margin-right: 2rem;
 }
 
 #search-primary-container {
@@ -73,18 +91,39 @@ body {
   grid-template-columns: 80% 20%;
 }
 
+#search-secondary-container {
+  margin-top: 1rem;
+}
+
+#search-secondary-container input {
+  padding: 0.5rem;
+}
+
+#search-secondary-container label {
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+
 .search-control {
   display: grid;
   grid-template-columns: 85% 15%;
 }
+
+.search-button {
+  background-color: rgb(192, 161, 144);
+  border: none;
+  color: #fff;
+}
 .account-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
+  color: #fff;
 }
 
 .fa-solid {
   font-size: 1.2rem;
+  margin-right: 2rem;
 }
 
 .account-container img {
